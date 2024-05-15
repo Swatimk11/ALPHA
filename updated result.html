@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LCA Results</title>
+</head>
+<body>
+    <h1>Analysis Results</h1>
+    <h2>Functions:</h2>
+    <ul>
+        {% for func, sentences in functions.items() %}
+            <li>{{ func }}:
+                <ul>
+                    {% for sent in sentences %}
+                        <li>{{ sent }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    <h2>Dependencies:</h2>
+    <ul>
+        {% for func, deps in dependencies.items() %}
+            <li>{{ func }}: {{ deps }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
